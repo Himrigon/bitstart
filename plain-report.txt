@@ -1,0 +1,4 @@
+jquery: 261.76 KB (87.5%)
+style-loader: 12.17 KB (4.07%)
+css-loader: 2.21 KB (0.738%)
+<self>: 23.01 KB (7.69%)

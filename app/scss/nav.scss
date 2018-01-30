@@ -1,0 +1,137 @@
+.nav {
+  background-color: #fff;
+  @extend .flex-row;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  position: relative;
+  padding: 20px 0;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  height: 90px;
+  box-shadow: 0 10px 40px 0 rgba(48, 103, 185, 0.18);
+  padding: 0 20px;
+  &__logo {}
+  &__list {
+    text-align: right;
+    li {
+      @include display-inline(middle);
+      font-size: 13px;
+      letter-spacing: -.3px;
+      border-bottom: 1px solid #666;
+      color: #666;
+      margin: 0 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        color: lighten(#666, 20%);
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-top: 90px;
+
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  text-align: center;
+
+  &__shadow {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 3, 3, .3);
+  }
+
+  &__video{
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    }
+
+
+  &:after {
+    @include vertical-center;
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 30;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    h1 {
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+.button__block {
+  display: inline-block;
+  text-align: center;
+  .button {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.button {
+  @include display-inline(middle) @extend .regular-text;
+  padding: 0 30px;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: .3s;
+
+  &:hover {
+    background-color: #00b4e3;
+    border-color: #00b4e3;
+  }
+  &--box {
+    border: 1px solid #999;
+  }
+}
+
+.box {
+  text-align: center;
+  border: 1px solid #999;
+  width: 300px;
+  height: 400px;
+  margin-top: 60px;
+  background-color: #fff;
+  margin: auto;
+  &__picture {
+    height: 150px;
+    background-color: #999;
+    box-shadow: 0 10px 40px 0 rgba(48, 103, 185, 0.18);
+  }
+  &__title {
+    text-align: center;
+  }
+  &__description {}
+}
