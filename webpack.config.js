@@ -60,7 +60,7 @@ module.exports = {
     loaders: [
       {
           test: /\.(webm|mp4)$/,
-          loader: 'file'
+          loader: 'file-loader'
       },
       {
         test: /\.jsx?$/,
