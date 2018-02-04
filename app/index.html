@@ -16,7 +16,7 @@
       logo
     </div>
     <ul class="nav__list">
-      <li>о фонде </li>
+      <li>о компании</li>
       <li>инвестору</li>
       <li>партнеру</li>
       <li>контакты</li>
@@ -27,50 +27,40 @@
     <video id="video" class="header__video" data-video-id="20" preload="metadata" width="100%" autoplay="" loop="">
       <source src="" type="video/mp4">
     </video>
-
     <div class="header__shadow"></div>
     <div class="header__text">
       <h1>криптовалютный инвестиционный фонд <span>bitstarclub</span></h1>
-      <p>с доходностью до 216% годовых</p>
+      <p>с доходностью до <span id="header-percent"></span>% годовых</p>
       <div class="button__block">
         <div class="button">Зарегистрироваться</div>
-        <div class="button">Зарегистрироваться</div>
+        <div class="button">Узнать больше</div>
       </div>
     </div>
   </header>
   <section class="section section--white">
     <div class="container">
+      <h3 class="container__title">
+        Почему выбирают Bitstart club
+      </h3>
       <div class="row">
         <div class="col-sm-4">
-          <p class="box__title">
-            инвест
-          </p>
-          <div class="box">
-            <div class="box__picture"></div>
-            <p class="box__description">
-            </p>
+          <div class="icon-block">
+            <i class="icon-block__icon icon icon--thumb"></i>
+            <p class="icon-block__text">5 лет успешной деятельности на рынке</p>
+
           </div>
         </div>
         <div class="col-sm-4">
-          <p class="box__title">
-            бизнес
-          </p>
-          <div class="box">
-            <div class="box__picture"></div>
-            <p class="box__description">
-            </p>
+          <div class="icon-block">
+            <i class="icon-block__icon icon--a-plus"></i>
+            <p class="icon-block__text">Максимальный рэйтинг надежности</p>
+
           </div>
         </div>
         <div class="col-sm-4">
-          <p class="box__title">
-            профи
-          </p>
-          <div class="box">
-            <div class="box__picture"></div>
-            <p class="box__description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit neque vero quo doloribus maiores totam nemo consequuntur provident similique optio.
-            </p>
-            <div class="button button--box">Выбрать</div>
+          <div class="icon-block">
+            <i class="icon-block__icon icon icon--user"></i>
+            <p class="icon-block__text">Профессиональная команда</p>
           </div>
         </div>
       </div>
@@ -78,33 +68,88 @@
   </section>
   <section class="section section--gray">
     <div class="container">
-      <div class="row">
+      <div class="container__title">
+        Направления инвестирования
+      </div>
+      <div class="row info">
         <div class="col-sm-4">
           <div class="info-block">
-            <p class="info-block__title">INVEST
-              <br>$50</p>
-            <ul>
-              <li>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </li>
-              <li>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-              </li>
-              <li>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus.</p>
-              </li>
-              <li>
-                <p>Lorem ipsum dolor sit amet, consectetur.</p>
-              </li>
-            </ul>
-            <div class="button">выбрать</div>
+            <div class="info-block__title">
+              Торговля
+            </div>
+            <p class="info-block__content">
+              Высоко квалифицированные трейдеры с&nbsp;многолетним опытом на&nbsp;фондовом рынке ведут торговлю криптовалютным портфелем в&nbsp;том числе с&nbsp;использованием алгоритмов машинного обучения. Для снижения торговых рисков сделки хеджируются фьючерсами на&nbsp;Чикагской товарной бирже CME.
+            </p>
           </div>
         </div>
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+          <div class="info-block">
+            <div class="info-block__title">
+              ICO
+            </div>
+            <p class="info-block__content">
+              Команда Bitstarclub осуществляет профессиональный отбор потенциально наиболее выгодных криптовалютных и&nbsp;блокчейн стартапов для&nbsp;инвестирования. Системный подход на&nbsp;этапах отбора и&nbsp;сопровождения позволяет нам&nbsp;получать финансовую выгоду в&nbsp;более чем 90%&nbsp;проектов!
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="info-block">
+            <div class="info-block__title">
+              Майнинг
+            </div>
+            <p class="info-block__content">
+              Часть инвестиционных средств идёт на&nbsp;обновление и&nbsp;увеличение мощностей нашего майнингового оборудования, что позволяет Bitstarclub минимизировать риски предоставляемых инвестиционных продуктов.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  <section class="section section--white">
+    <div class="container">
+      <h3 class="container__title">
+        Хочу стать инвестором с чего начать?
+      </h3>
+      <p class="container__subtitle">
+        Всего три простых шага отделяют вас от прибыли
+      </p>
+    </div>
+    <div class="start">
+      <div class="start__item">
+        <div class="item-picture item-picture--key"></div>
+        <p class="item-text"><a href="" class="link">Зарегистрируйся</a></p>
+        <div class="arrow"></div>
+      </div>
+      <div class="start__item">
+        <div class="item-picture item-picture--pig"></div>
+        <p class="item-text">Инвестируй</p>
+        <div class="arrow"></div>
+      </div>
+      <div class="start__item">
+        <div class="item-picture item-picture--profit"></div>
+        <p class="item-text">Получай прибыль</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--gray">
+    <div class="container">
+      <form action="" class="form">
+        <div class="form__row">
+          <div class="input-block"><label for="">Имя</label><input type="text"></div>
+          <div class="input-block"><label for="">Почта</label><input type="text"></div>
+          <div class="input-block"><label for="">Телефон</label><input type="text"></div>
+        </div>
+        <div class="textarea-block">
+          <label for="">Текст сообщения</label>
+          <textarea name="" id=""></textarea>
+        </div>
+        <div class="submit-block">
+          <input type="submit" value="Отправить">
+        </div>
+      </form>
+    </div>
+  </section>
+
 </body>
 
 </html>

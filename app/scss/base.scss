@@ -12,7 +12,9 @@ $block-title-text: 42px;
 $rate-text: 46px;
 $main-page-text:48px;
 
-
+$black: #333;
+$white:#fff;
+$placeholder-dark-grey: #666;
 
 * {
   line-height: 1.2em;
@@ -133,6 +135,7 @@ input {
 .justify-stretch { justify-content: stretch; }
 .justify-between { justify-content: space-between; }
 .text-center     { text-align: center; }
+.text-right       {text-align: right;}
 .overflow-hidden {
   @media (max-width: 768px){
     overflow: hidden;
@@ -140,12 +143,41 @@ input {
 }
 .section{
   width: 100%;
-  padding: 30px 0 60px;
+  padding: 50px 0 80px;
+  overflow: hidden;
+  @media(max-width:768px){
+    padding: 25px 0 40px;
+  }
   position: relative;
   &--white{
     background-color: #fff;
   }
   &--gray{
     background-color: #f5f5f5;
+  }
+}
+.container {
+  &__title {
+    @extend .block-title;
+    color: $black;
+    text-align: center;
+    margin: 0 0 22px;
+    font-weight: 300;
+    letter-spacing: -.7px;
+    &--white {
+      color: $white;
+    }
+    &--alone{
+      margin: 0 0 32px;
+    }
+  }
+  &__subtitle {
+    @extend .large-text;
+    color: $placeholder-dark-grey;
+    text-align: center;
+    margin: 28px 0 22px;
+    &--pre {
+      white-space: pre;
+    }
   }
 }

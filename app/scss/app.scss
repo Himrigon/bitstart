@@ -3,6 +3,9 @@
 @import './bootstrap-grid.scss';
 @import './nav.scss';
 @import './info-block.scss';
+@import './header.scss';
+@import './icon-block.scss';
+@import './form';
 body{
   background: #f5f5f5;
   font-family: 'Roboto', sans-serif;
@@ -12,4 +15,76 @@ body{
 
 h2{
   color: #333;
+}
+
+.link{
+  color: #008099;
+  border-bottom: 1px solid #008099;
+  @extend .regular-text;
+  &:hover{
+    border-bottom: 1px solid transparent
+  }
+
+}
+
+.start{
+  max-width: 900px;
+  margin: 60px auto 30px;
+  display: flex;
+  flex-direction: row;
+  &__item{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    .item-picture{
+      display: inline-block;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 1px solid #00b4e3;
+      width: 80px;
+      height: 80px;
+      background-position:  center;
+      background-size: 60% 60%;
+      background-repeat: no-repeat;
+      &--key{
+        background-image: url('../img/key.svg');
+      }
+      &--pig{
+        background-image: url('../img/pig-money-safe.svg');
+      }
+      &--profit {
+        background-image: url('../img/profits.svg');
+      }
+    }
+    .item-text {
+      @extend .regular-text;
+      color: #666;
+    }
+    .arrow{
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      top: 40px;
+      left: calc(100% - 20px);
+      background-color: #999;
+      &:after,
+      &:before{
+        content:'';
+        width: 18px;
+        height: 2px;
+        position: absolute;
+        background-color: #999;
+        left: calc(100% - 17px);
+        top: -5px;
+        transform: rotate(30deg);
+      }
+      &:before{
+        transform: rotate(-30deg);
+        top: 5px;
+      }
+    }
+  }
+
+
+
 }

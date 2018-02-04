@@ -1,0 +1,32 @@
+
+.icon-block{
+  margin: 50px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  &__icon{
+    width: 40px;
+    height: 40px;
+  }
+  &__text{
+    @extend .regular-text;
+    padding-left: 20px;
+    width: calc(100% - 20px);
+    margin: 0;
+    color: #666;
+  }
+}
+.icon{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  &--thumb{
+    background-image: url("../img/like.svg");
+  }
+  &--user{
+    background-image: url("../img/user.svg");
+  }
+  &--a-plus {
+    background-color: url("../img/tripple-a-icon.svg");
+  }
+}

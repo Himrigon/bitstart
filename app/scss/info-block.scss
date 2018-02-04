@@ -1,20 +1,33 @@
 .info-block {
-  width: 90%;
+  width: 100%;
   height: auto;
   text-align: center;
   background-color: #ffffff;
   box-shadow: 0 6px 12px 0 rgba(187, 187, 187, 0.3);
-  border-radius: 6px;
   overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 22px 22px 0;
-  padding: 20px 12px;
-  border-radius: 10px;
+  padding: 40px 0;
+  transform-origin: center top;
+  transform: scale(1);
+  transition: .3s;
+  min-height: 380px;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: -1px 25px 70px 7px rgba(187,187,187,0.6)
+  }
   &__title{
     text-transform: uppercase;
     font-weight: 500;
     color: rgba(0,0,0, .7);
-    @extend .large-text;
+    font-size: 21px;
   }
+  &__content {
+    width: 80%;
+    margin: 30px auto;
+    text-align: left;
+    color: #666;
+    @extend .regular-text;
+  }
+}
+.info{
+  margin-top: 60px;
 }
