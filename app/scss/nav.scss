@@ -15,7 +15,12 @@
   height: 90px;
   box-shadow: 0 2px 12px 0 rgba(48, 103, 185, 0.18);
   padding: 0 20px;
-  &__logo {}
+  &__logo {
+    width: 220px;
+    height: 82px;
+    @include bg-image('../img/bsc_1.svg');
+    background-size: contain;
+  }
   &__list {
     text-align: right;
     li {

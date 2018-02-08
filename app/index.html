@@ -13,7 +13,6 @@
 <body>
   <nav class="nav">
     <div class="nav__logo">
-      logo
     </div>
     <ul class="nav__list">
       <li>о компании</li>
@@ -24,7 +23,7 @@
     </ul>
   </nav>
   <header class="header">
-    <video id="video" class="header__video" data-video-id="20" preload="metadata" width="100%" autoplay="" loop="">
+    <video id="video" class="header__video" data-video-id="20" preload="metadata" width="100%" autoplay="" loop="" poster="/public/img/BSC_picture_jpeg.jpg">
       <source src="" type="video/mp4">
     </video>
     <div class="header__shadow"></div>
@@ -42,26 +41,18 @@
       <h3 class="container__title">
         Почему выбирают Bitstart club
       </h3>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="icon-block">
-            <i class="icon-block__icon icon icon--thumb"></i>
-            <p class="icon-block__text">5 лет успешной деятельности на рынке</p>
-
-          </div>
+      <div class="row icon-block__container">
+        <div class="icon-block">
+          <i class="icon-block__icon icon icon--graph"></i>
+          <p class="icon-block__text">5 лет успешной деятельности <br> на рынке</p>
         </div>
-        <div class="col-sm-4">
-          <div class="icon-block">
-            <i class="icon-block__icon icon--a-plus"></i>
-            <p class="icon-block__text">Максимальный рэйтинг надежности</p>
-
-          </div>
+        <div class="icon-block">
+          <i class="icon-block__icon icon icon--a-plus"></i>
+          <p class="icon-block__text">Максимальный рэйтинг <br>надежности</p>
         </div>
-        <div class="col-sm-4">
-          <div class="icon-block">
-            <i class="icon-block__icon icon icon--user"></i>
-            <p class="icon-block__text">Профессиональная команда</p>
-          </div>
+        <div class="icon-block">
+          <i class="icon-block__icon icon icon--user"></i>
+          <p class="icon-block__text">Профессиональная <br> команда</p>
         </div>
       </div>
     </div>
@@ -105,7 +96,9 @@
       </div>
     </div>
   </section>
-  <section class="section section--white">
+  <section class="section section--white" id="start">
+  <div class="shadow"></div>
+  <div class="content">
     <div class="container">
       <h3 class="container__title">
         Хочу стать инвестором с чего начать?
@@ -130,9 +123,109 @@
         <p class="item-text">Получай прибыль</p>
       </div>
     </div>
+  </div>
+  </section>
+  <section class="section section--white">
+    <div class="container">
+      <h3 class="container__title">
+        Финансовые решения для вас
+      </h3>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="solutions solutions--invest">
+            <div class="solutions__header">
+              <div class="header__bg">
+                <div class="bg"></div>
+              </div>
+              <div class="shadow"></div>
+              <div class="header__content">
+                <p class="title">INVEST</p>
+                <p class="description" id="invest"></p>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <span></span>
+                <p>доходность 15% в месяц</p>
+              </li>
+              <li>
+                <span></span>
+                <p>партнерская программа</p>
+              </li>
+            </ul>
+              <a href="" class="link">Подробнее</a>
+              <div class="solutions__button-block">
+                <a class="solutions__button">Выбрать</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="solutions solutions--busines">
+            <div class="solutions__header">
+              <div class="header__bg">
+                <div class="bg"></div>
+              </div>
+              <div class="shadow"></div>
+              <div class="header__content">
+                <p class="title">BUSINES</p>
+                <p class="description" id="invest"></p>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <span></span>
+                <p>доходность 15% в месяц</p>
+              </li>
+              <li>
+                <span></span>
+                <p>партнерская программа</p>
+              </li>
+            </ul>
+              <a href="" class="link">Подробнее</a>
+              <div class="solutions__button-block">
+                <a class="solutions__button">Выбрать</a>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="solutions solutions--premium">
+            <div class="solutions__header">
+              <div class="header__bg">
+                <div class="bg"></div>
+              </div>
+              <div class="shadow"></div>
+              <div class="header__content">
+                <p class="title">PREMIUM</p>
+                <p class="description" id="invest"></p>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <span></span>
+                <p>доходность 15% в месяц</p>
+              </li>
+              <li>
+                <span></span>
+                <p>партнерская программа</p>
+              </li>
+            </ul>
+              <a href="" class="link">Подробнее</a>
+              <div class="solutions__button-block">
+                <a class="solutions__button">Выбрать</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <section class="section section--gray">
     <div class="container">
+      <h3 class="container__title">
+        Остались вопросы?
+      </h3>
+      <p class="container__subtitle">
+        Заполните форму обратной связи и наш специалист свяжется с Вами
+      </p>
       <form action="" class="form">
         <div class="form__row">
           <div class="input-block"><label for="">Имя</label><input type="text"></div>

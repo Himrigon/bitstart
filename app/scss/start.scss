@@ -1,0 +1,79 @@
+.start{
+  max-width: 900px;
+  margin: 60px auto 30px;
+  display: flex;
+  flex-direction: row;
+  &__item{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    .item-picture{
+      display: inline-block;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 1px solid #fff;
+      width: 80px;
+      height: 80px;
+      background-position:  center;
+      background-size: 60% 60%;
+      background-repeat: no-repeat;
+      &--key{
+        background-image: url('../img/key.svg');
+      }
+      &--pig{
+        background-image: url('../img/pig-money-safe.svg');
+      }
+      &--profit {
+        background-image: url('../img/profits.svg');
+      }
+    }
+    .item-text {
+      @extend .regular-text;
+      color: #fff;
+    }
+    .arrow{
+      position: absolute;
+      width: 60px;
+      height: 1px;
+      top: 40px;
+      left: calc(100% - 20px);
+      background-color: #fff;
+      &:after,
+      &:before{
+        content:'';
+        width: 18px;
+        height: 1px;
+        position: absolute;
+        background-color: #fff;
+        left: calc(100% - 17px);
+        top: -5px;
+        transform: rotate(30deg);
+      }
+      &:before{
+        transform: rotate(-30deg);
+        top: 5px;
+      }
+    }
+  }
+}
+#start{
+ @include bg-image('../img/yyjR7NO1Doc.jpg');
+ background-size: cover;
+ height: 486px;
+
+ .shadow{
+  @extend .shadow;
+ }
+
+ .content{
+  @extend .shadow;
+  @extend %section-padding;
+
+  background-color: transparent;
+  z-index: 21;
+ }
+ .container__subtitle,
+ .container__title{
+  color: #fff;
+ }
+}
