@@ -5,7 +5,7 @@
   align-content: stretch;
   align-items: center;
   position: relative;
-  padding: 20px 0;
+  padding: 0;
   max-width: 100%;
   position: fixed;
   top: 0;
@@ -14,18 +14,28 @@
   z-index: 100;
   height: 90px;
   box-shadow: 0 2px 12px 0 rgba(48, 103, 185, 0.18);
-  padding: 0 20px;
+  &__button {
+    width: 180px;
+    height: 50px;
+  }
   &__logo {
     width: 220px;
     height: 82px;
     @include bg-image('../img/bsc_1.svg');
-    background-size: contain;
+    background-position: 0;
+    background-size: 130%;
+    padding-left: 20px;
+    @media(max-width:767px){
+      background-size: contain;
+    }
   }
   &__list {
     text-align: right;
+    padding: 0;
     li {
       @include display-inline(middle);
-      font-size: 13px;
+      @extend .small-text;
+      font-weight: 400;
       letter-spacing: -.3px;
       border-bottom: 1px solid #666;
       color: #666;
@@ -37,6 +47,20 @@
         border-bottom: none;
       }
     }
+  }
+  &__enter{
+    @extend .small-text;
+
+    display: block;
+    height: 100%;
+    padding: 0 15px;
+    text-transform: uppercase;
+    background: #00b4e3;
+    line-height: 90px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    min-width: 148px;
   }
 }
 

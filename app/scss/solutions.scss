@@ -18,12 +18,21 @@
       height: 100%;
       overflow: hidden;
       z-index: 1;
+
     }
     .header__content {
       @extend .absolute;
       padding: 50px 0 20px;
       z-index: 21;
 
+      .description{
+        color: #fff;
+        font-size: 32px;
+        font-weight: 500;
+        &:before{
+          content: "$";
+        }
+      }
       .title {
         @extend .sub-title;
 

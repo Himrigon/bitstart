@@ -15,12 +15,14 @@
     <div class="nav__logo">
     </div>
     <ul class="nav__list">
-      <li>о компании</li>
-      <li>инвестору</li>
-      <li>партнеру</li>
-      <li>контакты</li>
-      <li>личный кабинет</li>
+      <li data-target='about' >о компании</li>
+      <li data-target='investor' >инвестору</li>
+      <li data-target='partner' >партнеру</li>
+      <li data-target='form' >контакты</li>
     </ul>
+    <a href="#" class="nav__enter">
+личный кабинет
+    </a>
   </nav>
   <header class="header">
     <video id="video" class="header__video" data-video-id="20" preload="metadata" width="100%" autoplay="" loop="" poster="/public/img/BSC_picture_jpeg.jpg">
@@ -36,7 +38,7 @@
       </div>
     </div>
   </header>
-  <section class="section section--white">
+  <section class="section section--gray">
     <div class="container">
       <h3 class="container__title">
         Почему выбирают Bitstart club
@@ -48,7 +50,7 @@
         </div>
         <div class="icon-block">
           <i class="icon-block__icon icon icon--a-plus"></i>
-          <p class="icon-block__text">Максимальный рэйтинг <br>надежности</p>
+          <p class="icon-block__text">Максимальный рейтинг <br>надежности</p>
         </div>
         <div class="icon-block">
           <i class="icon-block__icon icon icon--user"></i>
@@ -57,7 +59,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--gray">
+  <section class="section section--white">
     <div class="container">
       <div class="container__title">
         Направления инвестирования
@@ -125,12 +127,12 @@
     </div>
   </div>
   </section>
-  <section class="section section--white">
+  <section class="section section--white" id="investor">
     <div class="container">
       <h3 class="container__title">
         Финансовые решения для вас
       </h3>
-      <div class="row">
+      <div class="row" id='finance'>
         <div class="col-sm-4">
           <div class="solutions solutions--invest">
             <div class="solutions__header">
@@ -167,8 +169,8 @@
               </div>
               <div class="shadow"></div>
               <div class="header__content">
-                <p class="title">BUSINES</p>
-                <p class="description" id="invest"></p>
+                <p class="title">BUSINESS</p>
+                <p class="description" id="buisnes"></p>
               </div>
             </div>
             <ul>
@@ -196,7 +198,7 @@
               <div class="shadow"></div>
               <div class="header__content">
                 <p class="title">PREMIUM</p>
-                <p class="description" id="invest"></p>
+                <p class="description" id="premium"></p>
               </div>
             </div>
             <ul>
@@ -218,7 +220,7 @@
       </div>
     </div>
   </section>
-  <section class="section section--gray">
+  <section class="section section--gray" id="form">
     <div class="container">
       <h3 class="container__title">
         Остались вопросы?
