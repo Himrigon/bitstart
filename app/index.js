@@ -15,8 +15,7 @@ const scrollToElement = (element, duration) => {
     var percent =  Math.pow(time / duration, 2)
 
     window.scrollTo(0, startingY + diff * percent)
-    console.log(window.pageYOffset,targetY)
-    if(window.pageYOffset > targetY){return}
+
     if (time < duration) {
       window.requestAnimationFrame(step)
     }
@@ -44,34 +43,46 @@ const animateNumber = ( number, duration, elem) => {
 }
 
 $(function(){
-  var financeWatcher = scrollMonitor.create( document.getElementById("finance"), -50 )
+  var financeWatcher = scrollMonitor.create( document.getElementById("finance"), -140 )
   var infoBlockWather = scrollMonitor.create( document.getElementById("info-block"), -140 )
   var infoBlock = $('.info-block')
   var solutions = $('.solutions')
+  var question = $('.question')
+  var questionContent = $('.question__content')
+  var logo = $('#logo')
+  var videoEl = $('#video')
+  var navItem = $('.nav__list li')
+  var flag = false
 
   animateNumber(PERCENT, 1000 ,'header-percent')
-
-  $('#video').append(`<source src="${video}" type="video/mp4">`)
-
-  $('.nav__list li').click(function(){scrollToElement($(this).data('target'), 700)})
-  $('#logo').click(function(){scrollToElement(0, 700)})
-
-
-
-
-
-
+  videoEl.append(`<source src="${video}" type="video/mp4">`)
+  navItem.click(function(){scrollToElement($(this).data('target'), 700)})
+  logo.click(function(){scrollToElement(0, 700)})
+  question.click(function(){
+    if(!$(this).hasClass('active')){
+      questionContent.slideUp('slow')
+      question.removeClass('active')
+      $(this)
+        .addClass('active')
+        .find('.question__content').slideDown("slow");
+    } else {
+      $(this)
+        .removeClass('active')
+        .find('.question__content').slideUp("slow");
+    }
+  })
   financeWatcher.enterViewport(function() {
-      animateNumber(50, 1500, 'invest')
-      animateNumber(250, 1500, 'buisnes')
-      animateNumber(1000, 1500, 'premium')
-      solutions.addClass('solutions--animated')
-
+    if(!flag){
+      animateNumber(50, 1200, 'invest')
+      animateNumber(250, 1200, 'buisnes')
+      animateNumber(1000, 1200, 'premium')
+      flag = true
+    }
+    solutions.addClass('solutions--animated')
   });
   infoBlockWather.enterViewport(function() {
       infoBlock.addClass('info-block--animated')
   });
-
 })
 
 
