@@ -1,28 +1,21 @@
 import './scss/app.scss'
 import video from './video/BSClub_low2.mp4'
-const PERCENT = 216
 import scrollMonitor from "scrollmonitor"
 
-const scrollToElement = (element, duration) => {
-  var targetY = (typeof(element) != 'number') ? ( document.getElementById(element).offsetTop - 65) : 0
-  var startingY = window.pageYOffset
-  var diff = targetY - startingY
-  var start
+const PERCENT = 216
 
-  window.requestAnimationFrame(function step(timestamp) {
-    if (!start) start = timestamp
-    var time = timestamp - start
-    var percent =  Math.pow(time / duration, 2)
-
-    window.scrollTo(0, startingY + diff * percent)
-
-    if (time < duration) {
-      window.requestAnimationFrame(step)
-    }
-  })
+function scrollToId(element) {
+  var target = (typeof(element) != 'number') ? ( document.getElementById(element).offsetTop - 65) : 0
+  $('html, body').animate({
+    scrollTop: target
+  }, 500);
+  setTimeout(function () {
+    flag = true;
+    changeSlogan();
+   },2000);
 }
 
-const animateNumber = ( number, duration, elem) => {
+function animateNumber( number, duration, elem){
   var startNumber = 0
   var diff = number - startNumber
   var start
@@ -56,8 +49,8 @@ $(function(){
 
   animateNumber(PERCENT, 1000 ,'header-percent')
   videoEl.append(`<source src="${video}" type="video/mp4">`)
-  navItem.click(function(){scrollToElement($(this).data('target'), 700)})
-  logo.click(function(){scrollToElement(0, 700)})
+  navItem.click(function(){scrollToId($(this).data('target'))})
+  logo.click(function(){scrollToId(0, 700)})
   question.click(function(){
     if(!$(this).hasClass('active')){
       questionContent.slideUp('slow')
