@@ -1,0 +1,22 @@
+.insurance {
+  &__title {
+    @extend .container__title;
+    text-align: left;
+  }
+  &__text {
+    @extend %text;
+    max-width: 600px;
+
+    span{
+      font-weight: 900;
+      font-size: 18px;
+    }
+  }
+  &__shield {
+    width: 130px;
+    height: 140px;
+    margin: auto;
+    @include bg-image('../img/shield.png')
+    background-size: contain;
+  }
+}

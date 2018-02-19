@@ -92,14 +92,31 @@
   }
 }
 
-.btn--invert{
+.btn--invert {
   @extend .btn;
 
   color: #fff;
   background-color: $blue;
   border: 1px solid $blue;
-  &:hover{
+  &:hover {
     background-color: #fff;
     color: #333;
   }
+}
+
+%text {
+  letter-spacing: .9px;
+  line-height: 27px;
+  font-weight: 400;
+  color: $black;
+  opacity: .8;
+}
+%no-animate{
+  position: relative;
+  top: 40px;
+  opacity: 0;
+}
+%animated{
+  top: 0;
+  opacity: 1;
 }

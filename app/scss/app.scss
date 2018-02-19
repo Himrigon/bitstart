@@ -8,6 +8,7 @@
 @import './form';
 @import './start.scss';
 @import './solutions.scss';
+@import './insurance.scss';
 
 body{
   background: #f5f5f5;
@@ -34,16 +35,13 @@ h2{
 
   p{
     &:first-of-type{
-      margin-top: 80px;
+      margin-top: 60px;
     }
 
     @extend .regular-text;
+    @extend %text;
 
-    padding: 0 0 14px 0;
-    letter-spacing: 1.2px;
-    line-height:27px;
-    font-weight: 400;
-    color: $black;
-    opacity: .8;
+    max-width: 900px;
+    margin: 0 auto 4px;
   }
 }

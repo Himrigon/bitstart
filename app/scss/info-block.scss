@@ -1,4 +1,6 @@
 .info-block {
+  @extend %no-animate;
+
   max-width: 330px;
   margin: 0 auto;
   height: auto;
@@ -9,9 +11,12 @@
   padding: 40px 0;
   transform-origin: center top;
   transform: scale(1);
-  transition: .3s;
+  transition: .4s;
   min-height: 380px;
   height: 430px;
+  &--animated{
+    @extend %animated;
+  }
 
   &__title{
     text-transform: uppercase;
