@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel="shortcut icon" href="img/faviconBSC.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
@@ -12,17 +13,19 @@
 
 <body>
   <nav class="nav">
-    <div class="nav__logo">
+    <div class="nav__logo" id="logo">
     </div>
-    <ul class="nav__list">
-      <li data-target='about' >о компании</li>
-      <li data-target='investor' >инвестору</li>
-      <li data-target='partner' >партнеру</li>
-      <li data-target='form' >контакты</li>
-    </ul>
-    <a href="#" class="nav__enter">
-личный кабинет
-    </a>
+    <div class="navigation">
+      <ul class="nav__list">
+        <li data-target='BSC'>о компании</li>
+        <li data-target='investor'>инвестору</li>
+        <li data-target='partner'>партнеру</li>
+        <li data-target='form'>контакты</li>
+      </ul>
+      <a href="#" class="nav__enter">
+        личный кабинет
+      </a>
+    </div>
   </nav>
   <header class="header">
     <video id="video" class="header__video" data-video-id="20" preload="metadata" width="100%" autoplay="" loop="" poster="/public/img/BSC_picture_jpeg.jpg">
@@ -41,20 +44,23 @@
   <section class="section section--gray">
     <div class="container">
       <h3 class="container__title">
-        Почему выбирают Bitstart club
+        Почему выбирают BitstartClub
       </h3>
       <div class="row icon-block__container">
         <div class="icon-block">
           <i class="icon-block__icon icon icon--graph"></i>
-          <p class="icon-block__text">5 лет успешной деятельности <br> на рынке</p>
+          <p class="icon-block__text">5 лет успешной деятельности
+            <br> на рынке</p>
         </div>
         <div class="icon-block">
           <i class="icon-block__icon icon icon--a-plus"></i>
-          <p class="icon-block__text">Максимальный рейтинг <br>надежности</p>
+          <p class="icon-block__text">Максимальный рейтинг
+            <br>надежности</p>
         </div>
         <div class="icon-block">
           <i class="icon-block__icon icon icon--user"></i>
-          <p class="icon-block__text">Профессиональная <br> команда</p>
+          <p class="icon-block__text">Профессиональная
+            <br> команда</p>
         </div>
       </div>
     </div>
@@ -70,6 +76,7 @@
             <div class="info-block__title">
               Торговля
             </div>
+            <div class="info-block__line"></div>
             <p class="info-block__content">
               Высоко квалифицированные трейдеры с&nbsp;многолетним опытом на&nbsp;фондовом рынке ведут торговлю криптовалютным портфелем в&nbsp;том числе с&nbsp;использованием алгоритмов машинного обучения. Для снижения торговых рисков сделки хеджируются фьючерсами на&nbsp;Чикагской товарной бирже CME.
             </p>
@@ -80,6 +87,7 @@
             <div class="info-block__title">
               ICO
             </div>
+            <div class="info-block__line"></div>
             <p class="info-block__content">
               Команда Bitstarclub осуществляет профессиональный отбор потенциально наиболее выгодных криптовалютных и&nbsp;блокчейн стартапов для&nbsp;инвестирования. Системный подход на&nbsp;этапах отбора и&nbsp;сопровождения позволяет нам&nbsp;получать финансовую выгоду в&nbsp;более чем 90%&nbsp;проектов!
             </p>
@@ -90,6 +98,7 @@
             <div class="info-block__title">
               Майнинг
             </div>
+            <div class="info-block__line"></div>
             <p class="info-block__content">
               Часть инвестиционных средств идёт на&nbsp;обновление и&nbsp;увеличение мощностей нашего майнингового оборудования, что позволяет Bitstarclub минимизировать риски предоставляемых инвестиционных продуктов.
             </p>
@@ -99,38 +108,65 @@
     </div>
   </section>
   <section class="section section--white" id="start">
-  <div class="shadow"></div>
-  <div class="content">
-    <div class="container">
-      <h3 class="container__title">
+    <div class="shadow"></div>
+    <div class="content">
+      <div class="container">
+        <h3 class="container__title">
         Хочу стать инвестором с чего начать?
       </h3>
-      <p class="container__subtitle">
-        Всего три простых шага отделяют вас от прибыли
+        <p class="container__subtitle">
+          Всего три простых шага отделяют вас от прибыли
+        </p>
+      </div>
+      <div class="start">
+        <div class="start__item">
+          <div class="item-picture item-picture--key"></div>
+          <p class="item-text">Зарегистрируйся</p>
+          <div class="arrow"></div>
+        </div>
+        <div class="start__item">
+          <div class="item-picture item-picture--pig"></div>
+          <p class="item-text">Инвестируй</p>
+          <div class="arrow"></div>
+        </div>
+        <div class="start__item">
+          <div class="item-picture item-picture--profit"></div>
+          <p class="item-text">Получай прибыль</p>
+        </div>
+      </div>
+      <a class="start__register">
+      Стать инвестором прямо сейчас
+    </a>
+    </div>
+  </section>
+  <section class="section section--grey" id="BSC">
+    <div class="container">
+      <h3 class="container__title">
+        Чуть больше о BitStarClub
+      </h3>
+      <p>
+        BitStarClub - это команда профессиональных трейдеров, аналитиков и программистов с колоссальным опытом, которая начинала свой путь как компания, осуществляющая доверительное управление средствами физических лиц на фондовом рынке.
+      </p>
+      <p>
+        Первыми нашими инвесторами стали друзья, которые, оценив высокое качество нашей работы, рекомендовали наши услуги своим знакомым и уже через несколько месяцев в управлении компании были многомиллионные суммы (в рублёвом эквиваленте).
+      </p>
+      <p>Оперируя серьёзными для нас суммами, было решено переводить по 10% ежемесячной прибыли на отдельный неприкосновенный счёт, который и по сей день гарантирует выполнение наших обязательств перед инвесторами.
+      </p>
+      <p>С течением времени компания разрасталась, привлекая под своё крыло успешных управляющих активами. Некоторые из них торговали биткоином ещё на заре его появления. Оценив потенциал криптовалют, компания решила пополнить ими свои портфельные решения.
+      </p>
+      <p>В скором времени наши трейдеры заметили, что стратегии, которыми мы пользовались на фондовом рынке, превосходно работали с криптовалютами, а в виду большей волатильности давали ощутимо больший профит. Акцент в торговле сместился на криптовалюты.
+      </p>
+      <p>На волне популяризации цифровых активов наша управляющая компания была реорганизована в криптовалютный инвестиционный фонд BitStarClub.
+      </p>
+      <p>
+        Сегодня BitStarClub представляет из себя успешную международную команду, высокотехнологичные решения для торговли и инвестиций, а так же свой собственный майнинговый центр. Приоритетами фонда являются надёжность, стабильность и максимально возможное снижение рисков. Вы можете нам доверять.
       </p>
     </div>
-    <div class="start">
-      <div class="start__item">
-        <div class="item-picture item-picture--key"></div>
-        <p class="item-text"><a href="" class="link">Зарегистрируйся</a></p>
-        <div class="arrow"></div>
-      </div>
-      <div class="start__item">
-        <div class="item-picture item-picture--pig"></div>
-        <p class="item-text">Инвестируй</p>
-        <div class="arrow"></div>
-      </div>
-      <div class="start__item">
-        <div class="item-picture item-picture--profit"></div>
-        <p class="item-text">Получай прибыль</p>
-      </div>
-    </div>
-  </div>
   </section>
   <section class="section section--white" id="investor">
     <div class="container">
       <h3 class="container__title">
-        Финансовые решения для вас
+        Финансовые решения для Вас
       </h3>
       <div class="row" id='finance'>
         <div class="col-sm-4">
@@ -148,17 +184,17 @@
             <ul>
               <li>
                 <span></span>
-                <p>доходность 15% в месяц</p>
+                <p>доходность 10% в месяц</p>
               </li>
               <li>
                 <span></span>
                 <p>партнерская программа</p>
               </li>
             </ul>
-              <a href="" class="link">Подробнее</a>
-              <div class="solutions__button-block">
-                <a class="solutions__button">Выбрать</a>
-              </div>
+            <a href="" class="link">Подробнее</a>
+            <div class="solutions__button-block">
+              <a class="solutions__button">Выбрать</a>
+            </div>
           </div>
         </div>
         <div class="col-sm-4">
@@ -183,10 +219,10 @@
                 <p>партнерская программа</p>
               </li>
             </ul>
-              <a href="" class="link">Подробнее</a>
-              <div class="solutions__button-block">
-                <a class="solutions__button">Выбрать</a>
-              </div>
+            <a href="" class="link">Подробнее</a>
+            <div class="solutions__button-block">
+              <a class="solutions__button">Выбрать</a>
+            </div>
           </div>
         </div>
         <div class="col-sm-4">
@@ -204,17 +240,17 @@
             <ul>
               <li>
                 <span></span>
-                <p>доходность 15% в месяц</p>
+                <p>доходность 18% в месяц</p>
               </li>
               <li>
                 <span></span>
                 <p>партнерская программа</p>
               </li>
             </ul>
-              <a href="" class="link">Подробнее</a>
-              <div class="solutions__button-block">
-                <a class="solutions__button">Выбрать</a>
-              </div>
+            <a href="" class="link">Подробнее</a>
+            <div class="solutions__button-block">
+              <a class="solutions__button">Выбрать</a>
+            </div>
           </div>
         </div>
       </div>
@@ -230,9 +266,18 @@
       </p>
       <form action="" class="form">
         <div class="form__row">
-          <div class="input-block"><label for="">Имя</label><input type="text"></div>
-          <div class="input-block"><label for="">Почта</label><input type="text"></div>
-          <div class="input-block"><label for="">Телефон</label><input type="text"></div>
+          <div class="input-block">
+            <label for="">Имя</label>
+            <input type="text">
+          </div>
+          <div class="input-block">
+            <label for="">Почта</label>
+            <input type="text">
+          </div>
+          <div class="input-block">
+            <label for="">Телефон</label>
+            <input type="text">
+          </div>
         </div>
         <div class="textarea-block">
           <label for="">Текст сообщения</label>
@@ -244,7 +289,6 @@
       </form>
     </div>
   </section>
-
 </body>
 
 </html>

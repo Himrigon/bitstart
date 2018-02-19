@@ -29,3 +29,21 @@ h2{
   }
 
 }
+
+#BSC{
+
+  p{
+    &:first-of-type{
+      margin-top: 80px;
+    }
+
+    @extend .regular-text;
+
+    padding: 0 0 14px 0;
+    letter-spacing: 1.2px;
+    line-height:27px;
+    font-weight: 400;
+    color: $black;
+    opacity: .8;
+  }
+}

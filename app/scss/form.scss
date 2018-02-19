@@ -1,7 +1,14 @@
+%params{
+  width: 540px;
+  margin: 0 auto;
+}
+
 .form {
   &__row {
+    @extend %params;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
@@ -9,7 +16,6 @@
 .textarea-block,
 .submit-block {
   padding: 0 15px;
-  width: 100%;
   label {
     @extend .regular-text;
 
@@ -31,8 +37,12 @@
 }
 
 .textarea-block {
+  @extend %params;
+
+
   margin-top: 25px;
   textarea {
+
     outline: 0;
     width: 100%;
     height: 120px;
@@ -47,6 +57,7 @@
 .submit-block {
   text-align: right;
   margin-top: 15px;
+  @extend %params;
   input {
     @extend .btn;
     height: 50px;

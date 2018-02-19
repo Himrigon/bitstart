@@ -75,6 +75,7 @@ module.exports = {
               query: {
                 localIdentName: 'ob-[local]',
                 importLoaders: 1,
+                minimize:true
               }
             },
             'resolve-url-loader',

@@ -1,27 +1,35 @@
-.start{
+.start {
   max-width: 900px;
   margin: 60px auto 30px;
   display: flex;
   flex-direction: row;
-  &__item{
+  &__register {
+    @extend .btn;
+    width: 500px;
+    background-color: transparent;
+    color: $white;
+    margin-top: 30px;
+  }
+  &__item {
     text-align: center;
     width: 100%;
     position: relative;
-    .item-picture{
+    .item-picture {
       display: inline-block;
       border-radius: 50%;
       background-color: transparent;
       border: 1px solid #fff;
       width: 80px;
       height: 80px;
-      background-position:  center;
+      background-position: center;
       background-size: 60% 60%;
       background-repeat: no-repeat;
-      &--key{
+      &--key {
         background-image: url('../img/key.svg');
       }
-      &--pig{
+      &--pig {
         background-image: url('../img/pig-money-safe.svg');
+        transform: scale(-1, 1);
       }
       &--profit {
         background-image: url('../img/profits.svg');
@@ -31,7 +39,7 @@
       @extend .regular-text;
       color: #fff;
     }
-    .arrow{
+    .arrow {
       position: absolute;
       width: 60px;
       height: 1px;
@@ -39,8 +47,8 @@
       left: calc(100% - 20px);
       background-color: #fff;
       &:after,
-      &:before{
-        content:'';
+      &:before {
+        content: '';
         width: 18px;
         height: 1px;
         position: absolute;
@@ -49,31 +57,35 @@
         top: -5px;
         transform: rotate(30deg);
       }
-      &:before{
+      &:before {
         transform: rotate(-30deg);
         top: 5px;
       }
     }
   }
 }
-#start{
- @include bg-image('../img/yyjR7NO1Doc.jpg');
- background-size: cover;
- height: 486px;
 
- .shadow{
-  @extend .shadow;
- }
+#start {
+  @include bg-image('../img/yyjR7NO1Doc.jpg');
+  background-size: cover;
+  height: 560px;
 
- .content{
-  @extend .shadow;
-  @extend %section-padding;
 
-  background-color: transparent;
-  z-index: 21;
- }
- .container__subtitle,
- .container__title{
-  color: #fff;
- }
+  .shadow {
+    @extend .shadow;
+  }
+
+  .content {
+    @extend .shadow;
+    @extend %section-padding;
+
+    text-align: center;
+    padding: 80px 0;
+    background-color: transparent;
+    z-index: 21;
+  }
+  .container__subtitle,
+  .container__title {
+    color: #fff;
+  }
 }
